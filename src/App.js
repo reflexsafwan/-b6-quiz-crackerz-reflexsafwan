@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import ErrorPage from './components/ErrorPage';
+import Graph from './components/Graph';
 import HomePage from './components/HomePage';
 import Root from './Root/Root';
 
@@ -15,6 +16,11 @@ function App() {
           path: '/',
           loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
           element: <HomePage></HomePage>
+        },
+        {
+          path: '/Graph',
+          loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
+          element: <Graph></Graph>
         },
       ]
     },
